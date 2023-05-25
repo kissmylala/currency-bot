@@ -1456,3 +1456,1101 @@ Caused by: java.net.UnknownHostException: postgres
 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
 	... 51 common frames omitted
+2023-05-25 17:49:35,100 INFO CurrencyBotApplication [main] Starting CurrencyBotApplication using Java 17.0.6 with PID 15179 (/home/user/IdeaProjects/currency_bot/target/classes started by user in /home/user/IdeaProjects/currency_bot)
+2023-05-25 17:49:35,127 INFO CurrencyBotApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-05-25 17:49:35,486 INFO RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 17:49:35,519 INFO RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interfaces.
+2023-05-25 17:49:35,846 INFO TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-05-25 17:49:35,853 INFO Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-25 17:49:35,853 INFO StandardService [main] Starting service [Tomcat]
+2023-05-25 17:49:35,853 INFO StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-25 17:49:35,903 INFO [/] [main] Initializing Spring embedded WebApplicationContext
+2023-05-25 17:49:35,904 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 749 ms
+2023-05-25 17:49:35,987 INFO HikariDataSource [main] HikariPool-1 - Starting...
+2023-05-25 17:49:37,009 ERROR HikariPool [main] HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Ошибка при попытке подсоединения.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:354)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:253)
+	at org.postgresql.Driver.makeConnection(Driver.java:434)
+	at org.postgresql.Driver.connect(Driver.java:291)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:281)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.adem.currency_bot.CurrencyBotApplication.main(CurrencyBotApplication.java:10)
+Caused by: java.net.UnknownHostException: postgres
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	... 32 common frames omitted
+2023-05-25 17:49:37,013 WARN AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: org.postgresql.util.PSQLException: Ошибка при попытке подсоединения.
+2023-05-25 17:49:37,017 INFO StandardService [main] Stopping service [Tomcat]
+2023-05-25 17:49:37,030 INFO ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-25 17:49:37,041 ERROR SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: org.postgresql.util.PSQLException: Ошибка при попытке подсоединения.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.adem.currency_bot.CurrencyBotApplication.main(CurrencyBotApplication.java:10)
+Caused by: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: Ошибка при попытке подсоединения.
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:286)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Ошибка при попытке подсоединения.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:354)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:253)
+	at org.postgresql.Driver.makeConnection(Driver.java:434)
+	at org.postgresql.Driver.connect(Driver.java:291)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:281)
+	... 20 common frames omitted
+Caused by: java.net.UnknownHostException: postgres
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	... 32 common frames omitted
+2023-05-25 17:50:03,606 INFO CurrencyBotApplication [main] Starting CurrencyBotApplication using Java 17.0.6 with PID 15298 (/home/user/IdeaProjects/currency_bot/target/classes started by user in /home/user/IdeaProjects/currency_bot)
+2023-05-25 17:50:03,609 INFO CurrencyBotApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-05-25 17:50:03,990 INFO RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 17:50:04,019 INFO RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interfaces.
+2023-05-25 17:50:04,314 INFO TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-05-25 17:50:04,319 INFO Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-25 17:50:04,320 INFO StandardService [main] Starting service [Tomcat]
+2023-05-25 17:50:04,320 INFO StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-25 17:50:04,369 INFO [/] [main] Initializing Spring embedded WebApplicationContext
+2023-05-25 17:50:04,369 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 731 ms
+2023-05-25 17:50:04,449 INFO HikariDataSource [main] HikariPool-1 - Starting...
+2023-05-25 17:50:04,641 INFO HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3a1b36a1
+2023-05-25 17:50:04,642 INFO HikariDataSource [main] HikariPool-1 - Start completed.
+2023-05-25 17:50:04,761 INFO database [main] Set default schema name to public
+2023-05-25 17:50:04,906 INFO lockservice [main] Successfully acquired change log lock
+2023-05-25 17:50:04,965 INFO changelog [main] Creating database history table with name: public.databasechangelog
+2023-05-25 17:50:04,970 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:50:04,979 INFO command [main] Using deploymentId: 5015404972
+2023-05-25 17:50:04,986 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:50:05,008 ERROR changelog [main] ChangeSet db/changelog/db.changelog-1.0.sql::raw::includeAll encountered an exception.
+2023-05-25 17:50:05,010 INFO command [main] Update command encountered an exception.
+2023-05-25 17:50:05,013 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:50:05,015 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:50:05,016 INFO command [main] Command execution complete
+2023-05-25 17:50:05,017 WARN AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "AUTO_INCREMENT"
+  Позиция: 110 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id BIGINT PRIMARY KEY AUTO_INCREMENT,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+2023-05-25 17:50:05,018 INFO HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-05-25 17:50:05,050 INFO HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-05-25 17:50:05,052 INFO StandardService [main] Stopping service [Tomcat]
+2023-05-25 17:50:05,060 INFO ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-25 17:50:05,069 ERROR SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "AUTO_INCREMENT"
+  Позиция: 110 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id BIGINT PRIMARY KEY AUTO_INCREMENT,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.adem.currency_bot.CurrencyBotApplication.main(CurrencyBotApplication.java:10)
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "AUTO_INCREMENT"
+  Позиция: 110 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id BIGINT PRIMARY KEY AUTO_INCREMENT,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at liquibase.command.CommandScope.execute(CommandScope.java:235)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:237)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1605)
+	at liquibase.Liquibase.update(Liquibase.java:229)
+	at liquibase.Liquibase.update(Liquibase.java:213)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:329)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "AUTO_INCREMENT"
+  Позиция: 110 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id BIGINT PRIMARY KEY AUTO_INCREMENT,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:121)
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:103)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:100)
+	at liquibase.command.CommandScope.execute(CommandScope.java:212)
+	... 30 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "AUTO_INCREMENT"
+  Позиция: 110 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id BIGINT PRIMARY KEY AUTO_INCREMENT,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:759)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:61)
+	at liquibase.changelog.ChangeLogIterator$2.lambda$null$0(ChangeLogIterator.java:109)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.changelog.ChangeLogIterator$2.lambda$run$1(ChangeLogIterator.java:109)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.Scope.child(Scope.java:260)
+	at liquibase.changelog.ChangeLogIterator$2.run(ChangeLogIterator.java:92)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.Scope.child(Scope.java:260)
+	at liquibase.Scope.child(Scope.java:264)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:66)
+	... 37 common frames omitted
+Caused by: liquibase.exception.DatabaseException: ERROR: syntax error at or near "AUTO_INCREMENT"
+  Позиция: 110 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id BIGINT PRIMARY KEY AUTO_INCREMENT,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:445)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:77)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:160)
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1287)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1269)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:717)
+	... 57 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "AUTO_INCREMENT"
+  Позиция: 110
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:290)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:441)
+	... 62 common frames omitted
+2023-05-25 17:52:24,792 INFO CurrencyBotApplication [main] Starting CurrencyBotApplication using Java 17.0.6 with PID 15436 (/home/user/IdeaProjects/currency_bot/target/classes started by user in /home/user/IdeaProjects/currency_bot)
+2023-05-25 17:52:24,794 INFO CurrencyBotApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-05-25 17:52:25,153 INFO RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 17:52:25,185 INFO RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interfaces.
+2023-05-25 17:52:25,489 INFO TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-05-25 17:52:25,495 INFO Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-25 17:52:25,496 INFO StandardService [main] Starting service [Tomcat]
+2023-05-25 17:52:25,496 INFO StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-25 17:52:25,547 INFO [/] [main] Initializing Spring embedded WebApplicationContext
+2023-05-25 17:52:25,547 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 721 ms
+2023-05-25 17:52:25,630 INFO HikariDataSource [main] HikariPool-1 - Starting...
+2023-05-25 17:52:25,811 INFO HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43d65a81
+2023-05-25 17:52:25,812 INFO HikariDataSource [main] HikariPool-1 - Start completed.
+2023-05-25 17:52:25,897 INFO database [main] Set default schema name to public
+2023-05-25 17:52:26,027 INFO lockservice [main] Successfully acquired change log lock
+2023-05-25 17:52:26,108 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:52:26,118 INFO command [main] Using deploymentId: 5015546111
+2023-05-25 17:52:26,126 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:52:26,153 ERROR changelog [main] ChangeSet db/changelog/db.changelog-1.0.sql::raw::includeAll encountered an exception.
+2023-05-25 17:52:26,155 INFO command [main] Update command encountered an exception.
+2023-05-25 17:52:26,158 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:52:26,160 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:52:26,161 INFO command [main] Command execution complete
+2023-05-25 17:52:26,162 WARN AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "SERIAL"
+  Позиция: 98 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id BIGINT SERIAL PRIMARY KEY ,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+2023-05-25 17:52:26,163 INFO HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-05-25 17:52:26,179 INFO HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-05-25 17:52:26,183 INFO StandardService [main] Stopping service [Tomcat]
+2023-05-25 17:52:26,194 INFO ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-25 17:52:26,205 ERROR SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "SERIAL"
+  Позиция: 98 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id BIGINT SERIAL PRIMARY KEY ,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.adem.currency_bot.CurrencyBotApplication.main(CurrencyBotApplication.java:10)
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "SERIAL"
+  Позиция: 98 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id BIGINT SERIAL PRIMARY KEY ,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at liquibase.command.CommandScope.execute(CommandScope.java:235)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:237)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1605)
+	at liquibase.Liquibase.update(Liquibase.java:229)
+	at liquibase.Liquibase.update(Liquibase.java:213)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:329)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "SERIAL"
+  Позиция: 98 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id BIGINT SERIAL PRIMARY KEY ,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:121)
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:103)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:100)
+	at liquibase.command.CommandScope.execute(CommandScope.java:212)
+	... 30 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "SERIAL"
+  Позиция: 98 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id BIGINT SERIAL PRIMARY KEY ,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:759)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:61)
+	at liquibase.changelog.ChangeLogIterator$2.lambda$null$0(ChangeLogIterator.java:109)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.changelog.ChangeLogIterator$2.lambda$run$1(ChangeLogIterator.java:109)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.Scope.child(Scope.java:260)
+	at liquibase.changelog.ChangeLogIterator$2.run(ChangeLogIterator.java:92)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.Scope.child(Scope.java:260)
+	at liquibase.Scope.child(Scope.java:264)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:66)
+	... 37 common frames omitted
+Caused by: liquibase.exception.DatabaseException: ERROR: syntax error at or near "SERIAL"
+  Позиция: 98 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id BIGINT SERIAL PRIMARY KEY ,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:445)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:77)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:160)
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1287)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1269)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:717)
+	... 57 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "SERIAL"
+  Позиция: 98
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:290)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:441)
+	... 62 common frames omitted
+2023-05-25 17:54:57,925 INFO CurrencyBotApplication [main] Starting CurrencyBotApplication using Java 17.0.6 with PID 16442 (/home/user/IdeaProjects/currency_bot/target/classes started by user in /home/user/IdeaProjects/currency_bot)
+2023-05-25 17:54:57,927 INFO CurrencyBotApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-05-25 17:54:58,276 INFO RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 17:54:58,306 INFO RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interfaces.
+2023-05-25 17:54:58,615 INFO TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-05-25 17:54:58,621 INFO Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-25 17:54:58,621 INFO StandardService [main] Starting service [Tomcat]
+2023-05-25 17:54:58,622 INFO StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-25 17:54:58,672 INFO [/] [main] Initializing Spring embedded WebApplicationContext
+2023-05-25 17:54:58,673 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 716 ms
+2023-05-25 17:54:58,760 INFO HikariDataSource [main] HikariPool-1 - Starting...
+2023-05-25 17:54:58,940 INFO HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22ead351
+2023-05-25 17:54:58,941 INFO HikariDataSource [main] HikariPool-1 - Start completed.
+2023-05-25 17:54:59,039 INFO database [main] Set default schema name to public
+2023-05-25 17:54:59,165 INFO lockservice [main] Successfully acquired change log lock
+2023-05-25 17:54:59,234 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:54:59,244 INFO command [main] Using deploymentId: 5015699237
+2023-05-25 17:54:59,251 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:54:59,276 ERROR changelog [main] ChangeSet db/changelog/db.changelog-1.0.sql::raw::includeAll encountered an exception.
+2023-05-25 17:54:59,278 INFO command [main] Update command encountered an exception.
+2023-05-25 17:54:59,280 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:54:59,283 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:54:59,284 INFO command [main] Command execution complete
+2023-05-25 17:54:59,285 WARN AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "BIGINT"
+  Позиция: 181 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id  SERIAL PRIMARY KEY ,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+2023-05-25 17:54:59,285 INFO HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-05-25 17:54:59,318 INFO HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-05-25 17:54:59,320 INFO StandardService [main] Stopping service [Tomcat]
+2023-05-25 17:54:59,328 INFO ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-25 17:54:59,337 ERROR SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "BIGINT"
+  Позиция: 181 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id  SERIAL PRIMARY KEY ,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.adem.currency_bot.CurrencyBotApplication.main(CurrencyBotApplication.java:10)
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "BIGINT"
+  Позиция: 181 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id  SERIAL PRIMARY KEY ,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at liquibase.command.CommandScope.execute(CommandScope.java:235)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:237)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1605)
+	at liquibase.Liquibase.update(Liquibase.java:229)
+	at liquibase.Liquibase.update(Liquibase.java:213)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:329)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "BIGINT"
+  Позиция: 181 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id  SERIAL PRIMARY KEY ,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:121)
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:103)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:100)
+	at liquibase.command.CommandScope.execute(CommandScope.java:212)
+	... 30 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-1.0.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ERROR: syntax error at or near "BIGINT"
+  Позиция: 181 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id  SERIAL PRIMARY KEY ,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:759)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:61)
+	at liquibase.changelog.ChangeLogIterator$2.lambda$null$0(ChangeLogIterator.java:109)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.changelog.ChangeLogIterator$2.lambda$run$1(ChangeLogIterator.java:109)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.Scope.child(Scope.java:260)
+	at liquibase.changelog.ChangeLogIterator$2.run(ChangeLogIterator.java:92)
+	at liquibase.Scope.lambda$child$0(Scope.java:194)
+	at liquibase.Scope.child(Scope.java:203)
+	at liquibase.Scope.child(Scope.java:193)
+	at liquibase.Scope.child(Scope.java:172)
+	at liquibase.Scope.child(Scope.java:260)
+	at liquibase.Scope.child(Scope.java:264)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:66)
+	... 37 common frames omitted
+Caused by: liquibase.exception.DatabaseException: ERROR: syntax error at or near "BIGINT"
+  Позиция: 181 [Failed SQL: (0) --liquibase sql formatted
+
+--changeset adem:1
+CREATE TABLE IF NOT EXISTS user_message(
+id  SERIAL PRIMARY KEY ,
+username VARCHAR(255) NOT NULL,
+text VARCHAR(255) NOT NULL,
+chat id BIGINT NOT NULL,
+messageId INT NOT NULL
+)]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:445)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:77)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:160)
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1287)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1269)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:717)
+	... 57 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "BIGINT"
+  Позиция: 181
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:290)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:441)
+	... 62 common frames omitted
+2023-05-25 17:55:25,799 INFO CurrencyBotApplication [main] Starting CurrencyBotApplication using Java 17.0.6 with PID 16558 (/home/user/IdeaProjects/currency_bot/target/classes started by user in /home/user/IdeaProjects/currency_bot)
+2023-05-25 17:55:25,800 INFO CurrencyBotApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-05-25 17:55:26,151 INFO RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 17:55:26,184 INFO RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interfaces.
+2023-05-25 17:55:26,481 INFO TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-05-25 17:55:26,486 INFO Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-25 17:55:26,487 INFO StandardService [main] Starting service [Tomcat]
+2023-05-25 17:55:26,487 INFO StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-25 17:55:26,541 INFO [/] [main] Initializing Spring embedded WebApplicationContext
+2023-05-25 17:55:26,548 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 719 ms
+2023-05-25 17:55:26,624 INFO HikariDataSource [main] HikariPool-1 - Starting...
+2023-05-25 17:55:26,816 INFO HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22ead351
+2023-05-25 17:55:26,817 INFO HikariDataSource [main] HikariPool-1 - Start completed.
+2023-05-25 17:55:26,911 INFO database [main] Set default schema name to public
+2023-05-25 17:55:27,017 INFO lockservice [main] Successfully acquired change log lock
+2023-05-25 17:55:27,102 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:55:27,112 INFO command [main] Using deploymentId: 5015727105
+2023-05-25 17:55:27,119 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:55:27,144 INFO changelog [main] Custom SQL executed
+2023-05-25 17:55:27,145 INFO changelog [main] ChangeSet db/changelog/db.changelog-1.0.sql::raw::includeAll ran successfully in 11ms
+2023-05-25 17:55:27,150 INFO util [main] UPDATE SUMMARY
+2023-05-25 17:55:27,150 INFO util [main] Run:                          1
+2023-05-25 17:55:27,150 INFO util [main] Previously run:               0
+2023-05-25 17:55:27,150 INFO util [main] Filtered out:                 0
+2023-05-25 17:55:27,150 INFO util [main] -------------------------------
+2023-05-25 17:55:27,150 INFO util [main] Total change sets:            1
+
+2023-05-25 17:55:27,151 INFO util [main] Update summary generated
+2023-05-25 17:55:27,151 INFO command [main] Update command completed successfully.
+2023-05-25 17:55:27,153 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:55:27,157 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:55:27,158 INFO command [main] Command execution complete
+2023-05-25 17:55:27,203 INFO LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-25 17:55:27,228 INFO Version [main] HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-25 17:55:27,388 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-25 17:55:27,800 ERROR LocalContainerEntityManagerFactoryBean [main] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+2023-05-25 17:55:27,801 WARN AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+2023-05-25 17:55:27,801 INFO HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-05-25 17:55:27,805 INFO HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-05-25 17:55:27,806 INFO StandardService [main] Stopping service [Tomcat]
+2023-05-25 17:55:27,814 INFO ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-25 17:55:27,822 ERROR SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.adem.currency_bot.CurrencyBotApplication.main(CurrencyBotApplication.java:10)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:144)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:96)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:74)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:293)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+2023-05-25 17:57:49,276 INFO CurrencyBotApplication [main] Starting CurrencyBotApplication using Java 17.0.6 with PID 16758 (/home/user/IdeaProjects/currency_bot/target/classes started by user in /home/user/IdeaProjects/currency_bot)
+2023-05-25 17:57:49,277 INFO CurrencyBotApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-05-25 17:57:49,635 INFO RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 17:57:49,666 INFO RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interfaces.
+2023-05-25 17:57:49,969 INFO TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-05-25 17:57:49,976 INFO Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-25 17:57:49,976 INFO StandardService [main] Starting service [Tomcat]
+2023-05-25 17:57:49,977 INFO StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-25 17:57:50,028 INFO [/] [main] Initializing Spring embedded WebApplicationContext
+2023-05-25 17:57:50,029 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 718 ms
+2023-05-25 17:57:50,117 INFO HikariDataSource [main] HikariPool-1 - Starting...
+2023-05-25 17:57:50,290 INFO HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43d65a81
+2023-05-25 17:57:50,291 INFO HikariDataSource [main] HikariPool-1 - Start completed.
+2023-05-25 17:57:50,385 INFO database [main] Set default schema name to public
+2023-05-25 17:57:50,513 INFO lockservice [main] Successfully acquired change log lock
+2023-05-25 17:57:50,597 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:57:50,610 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:57:50,624 INFO util [main] UPDATE SUMMARY
+2023-05-25 17:57:50,624 INFO util [main] Run:                          0
+2023-05-25 17:57:50,624 INFO util [main] Previously run:               1
+2023-05-25 17:57:50,624 INFO util [main] Filtered out:                 0
+2023-05-25 17:57:50,624 INFO util [main] -------------------------------
+2023-05-25 17:57:50,624 INFO util [main] Total change sets:            1
+
+2023-05-25 17:57:50,625 INFO util [main] Update summary generated
+2023-05-25 17:57:50,627 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:57:50,631 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:57:50,632 INFO command [main] Command execution complete
+2023-05-25 17:57:50,674 INFO LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-25 17:57:50,699 INFO Version [main] HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-25 17:57:50,890 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-25 17:57:51,266 ERROR LocalContainerEntityManagerFactoryBean [main] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+2023-05-25 17:57:51,267 WARN AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+2023-05-25 17:57:51,267 INFO HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-05-25 17:57:51,272 INFO HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-05-25 17:57:51,273 INFO StandardService [main] Stopping service [Tomcat]
+2023-05-25 17:57:51,281 INFO ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-25 17:57:51,291 ERROR SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.adem.currency_bot.CurrencyBotApplication.main(CurrencyBotApplication.java:10)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:144)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:96)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:74)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:293)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+2023-05-25 17:58:19,365 INFO CurrencyBotApplication [main] Starting CurrencyBotApplication using Java 17.0.6 with PID 16871 (/home/user/IdeaProjects/currency_bot/target/classes started by user in /home/user/IdeaProjects/currency_bot)
+2023-05-25 17:58:19,367 INFO CurrencyBotApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-05-25 17:58:19,717 INFO RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 17:58:19,754 INFO RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+2023-05-25 17:58:20,060 INFO TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-05-25 17:58:20,066 INFO Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-25 17:58:20,067 INFO StandardService [main] Starting service [Tomcat]
+2023-05-25 17:58:20,067 INFO StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-25 17:58:20,117 INFO [/] [main] Initializing Spring embedded WebApplicationContext
+2023-05-25 17:58:20,117 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 713 ms
+2023-05-25 17:58:20,201 INFO HikariDataSource [main] HikariPool-1 - Starting...
+2023-05-25 17:58:20,376 INFO HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31834a2b
+2023-05-25 17:58:20,377 INFO HikariDataSource [main] HikariPool-1 - Start completed.
+2023-05-25 17:58:20,480 INFO database [main] Set default schema name to public
+2023-05-25 17:58:20,614 INFO lockservice [main] Successfully acquired change log lock
+2023-05-25 17:58:20,687 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:58:20,699 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:58:20,711 INFO util [main] UPDATE SUMMARY
+2023-05-25 17:58:20,711 INFO util [main] Run:                          0
+2023-05-25 17:58:20,711 INFO util [main] Previously run:               1
+2023-05-25 17:58:20,712 INFO util [main] Filtered out:                 0
+2023-05-25 17:58:20,712 INFO util [main] -------------------------------
+2023-05-25 17:58:20,712 INFO util [main] Total change sets:            1
+
+2023-05-25 17:58:20,712 INFO util [main] Update summary generated
+2023-05-25 17:58:20,715 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:58:20,719 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:58:20,719 INFO command [main] Command execution complete
+2023-05-25 17:58:20,764 INFO LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-25 17:58:20,790 INFO Version [main] HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-25 17:58:20,984 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-25 17:58:21,361 ERROR LocalContainerEntityManagerFactoryBean [main] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [user_message]
+2023-05-25 17:58:21,362 WARN AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [user_message]
+2023-05-25 17:58:21,362 INFO HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-05-25 17:58:21,366 INFO HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-05-25 17:58:21,368 INFO StandardService [main] Stopping service [Tomcat]
+2023-05-25 17:58:21,375 INFO ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-25 17:58:21,384 ERROR SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [user_message]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.adem.currency_bot.CurrencyBotApplication.main(CurrencyBotApplication.java:10)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [user_message]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [user_message]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:133)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:96)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:74)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:293)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+2023-05-25 17:58:37,131 INFO CurrencyBotApplication [main] Starting CurrencyBotApplication using Java 17.0.6 with PID 17018 (/home/user/IdeaProjects/currency_bot/target/classes started by user in /home/user/IdeaProjects/currency_bot)
+2023-05-25 17:58:37,133 INFO CurrencyBotApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-05-25 17:58:37,488 INFO RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 17:58:37,521 INFO RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interfaces.
+2023-05-25 17:58:37,907 INFO TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-05-25 17:58:37,913 INFO Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-25 17:58:37,914 INFO StandardService [main] Starting service [Tomcat]
+2023-05-25 17:58:37,914 INFO StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-25 17:58:37,966 INFO [/] [main] Initializing Spring embedded WebApplicationContext
+2023-05-25 17:58:37,967 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 807 ms
+2023-05-25 17:58:38,059 INFO HikariDataSource [main] HikariPool-1 - Starting...
+2023-05-25 17:58:38,249 INFO HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22ead351
+2023-05-25 17:58:38,250 INFO HikariDataSource [main] HikariPool-1 - Start completed.
+2023-05-25 17:58:38,340 INFO database [main] Set default schema name to public
+2023-05-25 17:58:38,482 INFO lockservice [main] Successfully acquired change log lock
+2023-05-25 17:58:38,541 INFO changelog [main] Creating database history table with name: public.databasechangelog
+2023-05-25 17:58:38,546 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:58:38,555 INFO command [main] Using deploymentId: 5015918549
+2023-05-25 17:58:38,562 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:58:38,586 INFO changelog [main] Custom SQL executed
+2023-05-25 17:58:38,588 INFO changelog [main] ChangeSet db/changelog/db.changelog-1.0.sql::raw::includeAll ran successfully in 11ms
+2023-05-25 17:58:38,593 INFO util [main] UPDATE SUMMARY
+2023-05-25 17:58:38,593 INFO util [main] Run:                          1
+2023-05-25 17:58:38,593 INFO util [main] Previously run:               0
+2023-05-25 17:58:38,593 INFO util [main] Filtered out:                 0
+2023-05-25 17:58:38,593 INFO util [main] -------------------------------
+2023-05-25 17:58:38,593 INFO util [main] Total change sets:            1
+
+2023-05-25 17:58:38,594 INFO util [main] Update summary generated
+2023-05-25 17:58:38,594 INFO command [main] Update command completed successfully.
+2023-05-25 17:58:38,597 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:58:38,602 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:58:38,602 INFO command [main] Command execution complete
+2023-05-25 17:58:38,648 INFO LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-25 17:58:38,673 INFO Version [main] HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-25 17:58:38,870 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-25 17:58:39,256 ERROR LocalContainerEntityManagerFactoryBean [main] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+2023-05-25 17:58:39,256 WARN AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+2023-05-25 17:58:39,256 INFO HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-05-25 17:58:39,261 INFO HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-05-25 17:58:39,262 INFO StandardService [main] Stopping service [Tomcat]
+2023-05-25 17:58:39,270 INFO ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-25 17:58:39,279 ERROR SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.adem.currency_bot.CurrencyBotApplication.main(CurrencyBotApplication.java:10)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [chat_id] in table [user_message]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:144)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:96)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:74)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:293)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+2023-05-25 17:59:20,923 INFO CurrencyBotApplication [main] Starting CurrencyBotApplication using Java 17.0.6 with PID 17201 (/home/user/IdeaProjects/currency_bot/target/classes started by user in /home/user/IdeaProjects/currency_bot)
+2023-05-25 17:59:20,925 INFO CurrencyBotApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-05-25 17:59:21,287 INFO RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 17:59:21,319 INFO RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interfaces.
+2023-05-25 17:59:21,623 INFO TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-05-25 17:59:21,629 INFO Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-25 17:59:21,629 INFO StandardService [main] Starting service [Tomcat]
+2023-05-25 17:59:21,630 INFO StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-25 17:59:21,680 INFO [/] [main] Initializing Spring embedded WebApplicationContext
+2023-05-25 17:59:21,680 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 719 ms
+2023-05-25 17:59:21,763 INFO HikariDataSource [main] HikariPool-1 - Starting...
+2023-05-25 17:59:21,929 INFO HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3a1b36a1
+2023-05-25 17:59:21,930 INFO HikariDataSource [main] HikariPool-1 - Start completed.
+2023-05-25 17:59:22,021 INFO database [main] Set default schema name to public
+2023-05-25 17:59:22,165 INFO lockservice [main] Successfully acquired change log lock
+2023-05-25 17:59:22,226 INFO changelog [main] Creating database history table with name: public.databasechangelog
+2023-05-25 17:59:22,231 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:59:22,242 INFO command [main] Using deploymentId: 5015962234
+2023-05-25 17:59:22,249 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 17:59:22,276 INFO changelog [main] Custom SQL executed
+2023-05-25 17:59:22,277 INFO changelog [main] ChangeSet db/changelog/db.changelog-1.0.sql::raw::includeAll ran successfully in 11ms
+2023-05-25 17:59:22,283 INFO util [main] UPDATE SUMMARY
+2023-05-25 17:59:22,283 INFO util [main] Run:                          1
+2023-05-25 17:59:22,283 INFO util [main] Previously run:               0
+2023-05-25 17:59:22,283 INFO util [main] Filtered out:                 0
+2023-05-25 17:59:22,283 INFO util [main] -------------------------------
+2023-05-25 17:59:22,283 INFO util [main] Total change sets:            1
+
+2023-05-25 17:59:22,284 INFO util [main] Update summary generated
+2023-05-25 17:59:22,284 INFO command [main] Update command completed successfully.
+2023-05-25 17:59:22,286 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:59:22,291 INFO lockservice [main] Successfully released change log lock
+2023-05-25 17:59:22,291 INFO command [main] Command execution complete
+2023-05-25 17:59:22,332 INFO LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-25 17:59:22,356 INFO Version [main] HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-25 17:59:22,558 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-25 17:59:22,926 INFO JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-25 17:59:22,932 INFO LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-25 17:59:23,240 WARN JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-25 17:59:23,427 INFO Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-05-25 17:59:23,440 INFO TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-25 17:59:23,449 INFO CurrencyBotApplication [main] Started CurrencyBotApplication in 2.909 seconds (process running for 3.25)
+2023-05-25 17:59:57,435 INFO BotUpdatesListener [OkHttp https://api.telegram.org/...] Get updates: Update{update_id=202965245, message=Message{message_id=347, message_thread_id=null, from=User{id=1516284825, is_bot=false, first_name='Adem', last_name='null', username='shanghaivibez', language_code='ru', is_premium='null', added_to_attachment_menu='null', can_join_groups=null, can_read_all_group_messages=null, supports_inline_queries=null}, sender_chat=null, date=1685015997, chat=Chat{id=1516284825, type=Private, first_name='Adem', last_name='null', is_forum=null, username='shanghaivibez', title='null', photo=null, active_usernames=null, emoji_status_custom_emoji_id='null', bio='null', has_private_forwards=null, has_restricted_voice_and_video_messages=null, has_hidden_members=null, has_aggressive_anti_spam_enabled=null, join_to_send_messages=null, join_by_request=null, description='null', invite_link='null', pinned_message=null, permissions=null, slow_mode_delay=null, message_auto_delete_time=null, has_protected_content=null, sticker_set_name='null', can_set_sticker_set=null, linked_chat_id=null, location=null}, forward_from=null, forward_from_chat=null, forward_from_message_id=null, forward_signature='null', forward_sender_name='null', forward_date=null, is_topic_message=null, is_automatic_forward=null, reply_to_message=null, via_bot=null, edit_date=null, has_protected_content=null, has_media_spoiler=null, media_group_id='null', author_signature='null', text='/start', entities=[MessageEntity{type=bot_command, offset=0, length=6, url='null', user=null, language='null', custom_emoji_id='null'}], caption_entities=null, audio=null, document=null, animation=null, game=null, photo=null, sticker=null, video=null, voice=null, video_note=null, caption='null', contact=null, location=null, venue=null, poll=null, dice=null, new_chat_members=null, left_chat_member=null, new_chat_title='null', new_chat_photo=null, delete_chat_photo=null, group_chat_created=null, supergroup_chat_created=null, channel_chat_created=null, message_auto_delete_timer_changed=null, migrate_to_chat_id=null, migrate_from_chat_id=null, pinned_message=null, invoice=null, successful_payment=null, user_shared=null, chat_shared=null, connected_website='null', passport_data=null, proximity_alert_triggered=null, forum_topic_created=null, forum_topic_edited=null, forum_topic_closed=null, forum_topic_reopened=null, general_forum_topic_hidden=null, general_forum_topic_unhidden=null, write_access_allowed=null, video_chat_started=null, video_chat_ended=null, video_chat_participants_invited=null, video_chat_scheduled=null, reply_markup=null, web_app_data=null}, edited_message=null, channel_post=null, edited_channel_post=null, inline_query=null, chosen_inline_result=null, callback_query=null, shipping_query=null, pre_checkout_query=null, poll=null, poll_answer=null, my_chat_member=null, chat_member=null, chat_join_request=null}
+2023-05-25 18:00:00,790 INFO BotUpdatesListener [OkHttp https://api.telegram.org/...] Get updates: Update{update_id=202965246, message=Message{message_id=349, message_thread_id=null, from=User{id=1516284825, is_bot=false, first_name='Adem', last_name='null', username='shanghaivibez', language_code='ru', is_premium='null', added_to_attachment_menu='null', can_join_groups=null, can_read_all_group_messages=null, supports_inline_queries=null}, sender_chat=null, date=1685016000, chat=Chat{id=1516284825, type=Private, first_name='Adem', last_name='null', is_forum=null, username='shanghaivibez', title='null', photo=null, active_usernames=null, emoji_status_custom_emoji_id='null', bio='null', has_private_forwards=null, has_restricted_voice_and_video_messages=null, has_hidden_members=null, has_aggressive_anti_spam_enabled=null, join_to_send_messages=null, join_by_request=null, description='null', invite_link='null', pinned_message=null, permissions=null, slow_mode_delay=null, message_auto_delete_time=null, has_protected_content=null, sticker_set_name='null', can_set_sticker_set=null, linked_chat_id=null, location=null}, forward_from=null, forward_from_chat=null, forward_from_message_id=null, forward_signature='null', forward_sender_name='null', forward_date=null, is_topic_message=null, is_automatic_forward=null, reply_to_message=null, via_bot=null, edit_date=null, has_protected_content=null, has_media_spoiler=null, media_group_id='null', author_signature='null', text='100t', entities=null, caption_entities=null, audio=null, document=null, animation=null, game=null, photo=null, sticker=null, video=null, voice=null, video_note=null, caption='null', contact=null, location=null, venue=null, poll=null, dice=null, new_chat_members=null, left_chat_member=null, new_chat_title='null', new_chat_photo=null, delete_chat_photo=null, group_chat_created=null, supergroup_chat_created=null, channel_chat_created=null, message_auto_delete_timer_changed=null, migrate_to_chat_id=null, migrate_from_chat_id=null, pinned_message=null, invoice=null, successful_payment=null, user_shared=null, chat_shared=null, connected_website='null', passport_data=null, proximity_alert_triggered=null, forum_topic_created=null, forum_topic_edited=null, forum_topic_closed=null, forum_topic_reopened=null, general_forum_topic_hidden=null, general_forum_topic_unhidden=null, write_access_allowed=null, video_chat_started=null, video_chat_ended=null, video_chat_participants_invited=null, video_chat_scheduled=null, reply_markup=null, web_app_data=null}, edited_message=null, channel_post=null, edited_channel_post=null, inline_query=null, chosen_inline_result=null, callback_query=null, shipping_query=null, pre_checkout_query=null, poll=null, poll_answer=null, my_chat_member=null, chat_member=null, chat_join_request=null}
+2023-05-25 18:00:08,496 INFO BotUpdatesListener [OkHttp https://api.telegram.org/...] Get updates: Update{update_id=202965247, message=Message{message_id=351, message_thread_id=null, from=User{id=1516284825, is_bot=false, first_name='Adem', last_name='null', username='shanghaivibez', language_code='ru', is_premium='null', added_to_attachment_menu='null', can_join_groups=null, can_read_all_group_messages=null, supports_inline_queries=null}, sender_chat=null, date=1685016008, chat=Chat{id=1516284825, type=Private, first_name='Adem', last_name='null', is_forum=null, username='shanghaivibez', title='null', photo=null, active_usernames=null, emoji_status_custom_emoji_id='null', bio='null', has_private_forwards=null, has_restricted_voice_and_video_messages=null, has_hidden_members=null, has_aggressive_anti_spam_enabled=null, join_to_send_messages=null, join_by_request=null, description='null', invite_link='null', pinned_message=null, permissions=null, slow_mode_delay=null, message_auto_delete_time=null, has_protected_content=null, sticker_set_name='null', can_set_sticker_set=null, linked_chat_id=null, location=null}, forward_from=null, forward_from_chat=null, forward_from_message_id=null, forward_signature='null', forward_sender_name='null', forward_date=null, is_topic_message=null, is_automatic_forward=null, reply_to_message=null, via_bot=null, edit_date=null, has_protected_content=null, has_media_spoiler=null, media_group_id='null', author_signature='null', text='0.002$', entities=null, caption_entities=null, audio=null, document=null, animation=null, game=null, photo=null, sticker=null, video=null, voice=null, video_note=null, caption='null', contact=null, location=null, venue=null, poll=null, dice=null, new_chat_members=null, left_chat_member=null, new_chat_title='null', new_chat_photo=null, delete_chat_photo=null, group_chat_created=null, supergroup_chat_created=null, channel_chat_created=null, message_auto_delete_timer_changed=null, migrate_to_chat_id=null, migrate_from_chat_id=null, pinned_message=null, invoice=null, successful_payment=null, user_shared=null, chat_shared=null, connected_website='null', passport_data=null, proximity_alert_triggered=null, forum_topic_created=null, forum_topic_edited=null, forum_topic_closed=null, forum_topic_reopened=null, general_forum_topic_hidden=null, general_forum_topic_unhidden=null, write_access_allowed=null, video_chat_started=null, video_chat_ended=null, video_chat_participants_invited=null, video_chat_scheduled=null, reply_markup=null, web_app_data=null}, edited_message=null, channel_post=null, edited_channel_post=null, inline_query=null, chosen_inline_result=null, callback_query=null, shipping_query=null, pre_checkout_query=null, poll=null, poll_answer=null, my_chat_member=null, chat_member=null, chat_join_request=null}
+2023-05-25 18:00:17,699 INFO BotUpdatesListener [OkHttp https://api.telegram.org/...] Get updates: Update{update_id=202965248, message=Message{message_id=353, message_thread_id=null, from=User{id=1516284825, is_bot=false, first_name='Adem', last_name='null', username='shanghaivibez', language_code='ru', is_premium='null', added_to_attachment_menu='null', can_join_groups=null, can_read_all_group_messages=null, supports_inline_queries=null}, sender_chat=null, date=1685016017, chat=Chat{id=1516284825, type=Private, first_name='Adem', last_name='null', is_forum=null, username='shanghaivibez', title='null', photo=null, active_usernames=null, emoji_status_custom_emoji_id='null', bio='null', has_private_forwards=null, has_restricted_voice_and_video_messages=null, has_hidden_members=null, has_aggressive_anti_spam_enabled=null, join_to_send_messages=null, join_by_request=null, description='null', invite_link='null', pinned_message=null, permissions=null, slow_mode_delay=null, message_auto_delete_time=null, has_protected_content=null, sticker_set_name='null', can_set_sticker_set=null, linked_chat_id=null, location=null}, forward_from=null, forward_from_chat=null, forward_from_message_id=null, forward_signature='null', forward_sender_name='null', forward_date=null, is_topic_message=null, is_automatic_forward=null, reply_to_message=null, via_bot=null, edit_date=null, has_protected_content=null, has_media_spoiler=null, media_group_id='null', author_signature='null', text='/history', entities=[MessageEntity{type=bot_command, offset=0, length=8, url='null', user=null, language='null', custom_emoji_id='null'}], caption_entities=null, audio=null, document=null, animation=null, game=null, photo=null, sticker=null, video=null, voice=null, video_note=null, caption='null', contact=null, location=null, venue=null, poll=null, dice=null, new_chat_members=null, left_chat_member=null, new_chat_title='null', new_chat_photo=null, delete_chat_photo=null, group_chat_created=null, supergroup_chat_created=null, channel_chat_created=null, message_auto_delete_timer_changed=null, migrate_to_chat_id=null, migrate_from_chat_id=null, pinned_message=null, invoice=null, successful_payment=null, user_shared=null, chat_shared=null, connected_website='null', passport_data=null, proximity_alert_triggered=null, forum_topic_created=null, forum_topic_edited=null, forum_topic_closed=null, forum_topic_reopened=null, general_forum_topic_hidden=null, general_forum_topic_unhidden=null, write_access_allowed=null, video_chat_started=null, video_chat_ended=null, video_chat_participants_invited=null, video_chat_scheduled=null, reply_markup=null, web_app_data=null}, edited_message=null, channel_post=null, edited_channel_post=null, inline_query=null, chosen_inline_result=null, callback_query=null, shipping_query=null, pre_checkout_query=null, poll=null, poll_answer=null, my_chat_member=null, chat_member=null, chat_join_request=null}
+2023-05-25 18:00:25,777 INFO BotUpdatesListener [OkHttp https://api.telegram.org/...] Get updates: Update{update_id=202965249, message=Message{message_id=355, message_thread_id=null, from=User{id=1516284825, is_bot=false, first_name='Adem', last_name='null', username='shanghaivibez', language_code='ru', is_premium='null', added_to_attachment_menu='null', can_join_groups=null, can_read_all_group_messages=null, supports_inline_queries=null}, sender_chat=null, date=1685016025, chat=Chat{id=1516284825, type=Private, first_name='Adem', last_name='null', is_forum=null, username='shanghaivibez', title='null', photo=null, active_usernames=null, emoji_status_custom_emoji_id='null', bio='null', has_private_forwards=null, has_restricted_voice_and_video_messages=null, has_hidden_members=null, has_aggressive_anti_spam_enabled=null, join_to_send_messages=null, join_by_request=null, description='null', invite_link='null', pinned_message=null, permissions=null, slow_mode_delay=null, message_auto_delete_time=null, has_protected_content=null, sticker_set_name='null', can_set_sticker_set=null, linked_chat_id=null, location=null}, forward_from=null, forward_from_chat=null, forward_from_message_id=null, forward_signature='null', forward_sender_name='null', forward_date=null, is_topic_message=null, is_automatic_forward=null, reply_to_message=null, via_bot=null, edit_date=null, has_protected_content=null, has_media_spoiler=null, media_group_id='null', author_signature='null', text='/help', entities=[MessageEntity{type=bot_command, offset=0, length=5, url='null', user=null, language='null', custom_emoji_id='null'}], caption_entities=null, audio=null, document=null, animation=null, game=null, photo=null, sticker=null, video=null, voice=null, video_note=null, caption='null', contact=null, location=null, venue=null, poll=null, dice=null, new_chat_members=null, left_chat_member=null, new_chat_title='null', new_chat_photo=null, delete_chat_photo=null, group_chat_created=null, supergroup_chat_created=null, channel_chat_created=null, message_auto_delete_timer_changed=null, migrate_to_chat_id=null, migrate_from_chat_id=null, pinned_message=null, invoice=null, successful_payment=null, user_shared=null, chat_shared=null, connected_website='null', passport_data=null, proximity_alert_triggered=null, forum_topic_created=null, forum_topic_edited=null, forum_topic_closed=null, forum_topic_reopened=null, general_forum_topic_hidden=null, general_forum_topic_unhidden=null, write_access_allowed=null, video_chat_started=null, video_chat_ended=null, video_chat_participants_invited=null, video_chat_scheduled=null, reply_markup=null, web_app_data=null}, edited_message=null, channel_post=null, edited_channel_post=null, inline_query=null, chosen_inline_result=null, callback_query=null, shipping_query=null, pre_checkout_query=null, poll=null, poll_answer=null, my_chat_member=null, chat_member=null, chat_join_request=null}
+2023-05-25 18:00:31,204 INFO BotUpdatesListener [OkHttp https://api.telegram.org/...] Get updates: Update{update_id=202965250, message=Message{message_id=357, message_thread_id=null, from=User{id=1516284825, is_bot=false, first_name='Adem', last_name='null', username='shanghaivibez', language_code='ru', is_premium='null', added_to_attachment_menu='null', can_join_groups=null, can_read_all_group_messages=null, supports_inline_queries=null}, sender_chat=null, date=1685016031, chat=Chat{id=1516284825, type=Private, first_name='Adem', last_name='null', is_forum=null, username='shanghaivibez', title='null', photo=null, active_usernames=null, emoji_status_custom_emoji_id='null', bio='null', has_private_forwards=null, has_restricted_voice_and_video_messages=null, has_hidden_members=null, has_aggressive_anti_spam_enabled=null, join_to_send_messages=null, join_by_request=null, description='null', invite_link='null', pinned_message=null, permissions=null, slow_mode_delay=null, message_auto_delete_time=null, has_protected_content=null, sticker_set_name='null', can_set_sticker_set=null, linked_chat_id=null, location=null}, forward_from=null, forward_from_chat=null, forward_from_message_id=null, forward_signature='null', forward_sender_name='null', forward_date=null, is_topic_message=null, is_automatic_forward=null, reply_to_message=null, via_bot=null, edit_date=null, has_protected_content=null, has_media_spoiler=null, media_group_id='null', author_signature='null', text='/rates', entities=[MessageEntity{type=bot_command, offset=0, length=6, url='null', user=null, language='null', custom_emoji_id='null'}], caption_entities=null, audio=null, document=null, animation=null, game=null, photo=null, sticker=null, video=null, voice=null, video_note=null, caption='null', contact=null, location=null, venue=null, poll=null, dice=null, new_chat_members=null, left_chat_member=null, new_chat_title='null', new_chat_photo=null, delete_chat_photo=null, group_chat_created=null, supergroup_chat_created=null, channel_chat_created=null, message_auto_delete_timer_changed=null, migrate_to_chat_id=null, migrate_from_chat_id=null, pinned_message=null, invoice=null, successful_payment=null, user_shared=null, chat_shared=null, connected_website='null', passport_data=null, proximity_alert_triggered=null, forum_topic_created=null, forum_topic_edited=null, forum_topic_closed=null, forum_topic_reopened=null, general_forum_topic_hidden=null, general_forum_topic_unhidden=null, write_access_allowed=null, video_chat_started=null, video_chat_ended=null, video_chat_participants_invited=null, video_chat_scheduled=null, reply_markup=null, web_app_data=null}, edited_message=null, channel_post=null, edited_channel_post=null, inline_query=null, chosen_inline_result=null, callback_query=null, shipping_query=null, pre_checkout_query=null, poll=null, poll_answer=null, my_chat_member=null, chat_member=null, chat_join_request=null}
+2023-05-25 18:01:05,245 INFO LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-25 18:01:05,247 INFO HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-05-25 18:01:05,255 INFO HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-05-25 18:01:09,405 INFO CurrencyBotApplication [main] Starting CurrencyBotApplication using Java 17.0.6 with PID 17394 (/home/user/IdeaProjects/currency_bot/target/classes started by user in /home/user/IdeaProjects/currency_bot)
+2023-05-25 18:01:09,406 INFO CurrencyBotApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-05-25 18:01:09,782 INFO RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 18:01:09,814 INFO RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interfaces.
+2023-05-25 18:01:10,133 INFO TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-05-25 18:01:10,139 INFO Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-25 18:01:10,140 INFO StandardService [main] Starting service [Tomcat]
+2023-05-25 18:01:10,140 INFO StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-25 18:01:10,192 INFO [/] [main] Initializing Spring embedded WebApplicationContext
+2023-05-25 18:01:10,192 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 754 ms
+2023-05-25 18:01:10,284 INFO HikariDataSource [main] HikariPool-1 - Starting...
+2023-05-25 18:01:10,450 INFO HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22ead351
+2023-05-25 18:01:10,451 INFO HikariDataSource [main] HikariPool-1 - Start completed.
+2023-05-25 18:01:10,544 INFO database [main] Set default schema name to public
+2023-05-25 18:01:10,666 INFO lockservice [main] Successfully acquired change log lock
+2023-05-25 18:01:10,742 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 18:01:10,753 INFO changelog [main] Reading from public.databasechangelog
+2023-05-25 18:01:10,763 INFO util [main] UPDATE SUMMARY
+2023-05-25 18:01:10,764 INFO util [main] Run:                          0
+2023-05-25 18:01:10,764 INFO util [main] Previously run:               1
+2023-05-25 18:01:10,764 INFO util [main] Filtered out:                 0
+2023-05-25 18:01:10,764 INFO util [main] -------------------------------
+2023-05-25 18:01:10,764 INFO util [main] Total change sets:            1
+
+2023-05-25 18:01:10,765 INFO util [main] Update summary generated
+2023-05-25 18:01:10,768 INFO lockservice [main] Successfully released change log lock
+2023-05-25 18:01:10,771 INFO lockservice [main] Successfully released change log lock
+2023-05-25 18:01:10,772 INFO command [main] Command execution complete
+2023-05-25 18:01:10,813 INFO LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-25 18:01:10,842 INFO Version [main] HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-25 18:01:11,045 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-25 18:01:11,431 INFO JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-25 18:01:11,436 INFO LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-25 18:01:11,747 WARN JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-25 18:01:11,942 INFO Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-05-25 18:01:11,951 INFO TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-25 18:01:11,957 INFO CurrencyBotApplication [main] Started CurrencyBotApplication in 2.943 seconds (process running for 3.378)
+2023-05-25 18:01:17,294 INFO BotUpdatesListener [OkHttp https://api.telegram.org/...] Get updates: Update{update_id=202965251, message=Message{message_id=359, message_thread_id=null, from=User{id=1516284825, is_bot=false, first_name='Adem', last_name='null', username='shanghaivibez', language_code='ru', is_premium='null', added_to_attachment_menu='null', can_join_groups=null, can_read_all_group_messages=null, supports_inline_queries=null}, sender_chat=null, date=1685016077, chat=Chat{id=1516284825, type=Private, first_name='Adem', last_name='null', is_forum=null, username='shanghaivibez', title='null', photo=null, active_usernames=null, emoji_status_custom_emoji_id='null', bio='null', has_private_forwards=null, has_restricted_voice_and_video_messages=null, has_hidden_members=null, has_aggressive_anti_spam_enabled=null, join_to_send_messages=null, join_by_request=null, description='null', invite_link='null', pinned_message=null, permissions=null, slow_mode_delay=null, message_auto_delete_time=null, has_protected_content=null, sticker_set_name='null', can_set_sticker_set=null, linked_chat_id=null, location=null}, forward_from=null, forward_from_chat=null, forward_from_message_id=null, forward_signature='null', forward_sender_name='null', forward_date=null, is_topic_message=null, is_automatic_forward=null, reply_to_message=null, via_bot=null, edit_date=null, has_protected_content=null, has_media_spoiler=null, media_group_id='null', author_signature='null', text='/start', entities=[MessageEntity{type=bot_command, offset=0, length=6, url='null', user=null, language='null', custom_emoji_id='null'}], caption_entities=null, audio=null, document=null, animation=null, game=null, photo=null, sticker=null, video=null, voice=null, video_note=null, caption='null', contact=null, location=null, venue=null, poll=null, dice=null, new_chat_members=null, left_chat_member=null, new_chat_title='null', new_chat_photo=null, delete_chat_photo=null, group_chat_created=null, supergroup_chat_created=null, channel_chat_created=null, message_auto_delete_timer_changed=null, migrate_to_chat_id=null, migrate_from_chat_id=null, pinned_message=null, invoice=null, successful_payment=null, user_shared=null, chat_shared=null, connected_website='null', passport_data=null, proximity_alert_triggered=null, forum_topic_created=null, forum_topic_edited=null, forum_topic_closed=null, forum_topic_reopened=null, general_forum_topic_hidden=null, general_forum_topic_unhidden=null, write_access_allowed=null, video_chat_started=null, video_chat_ended=null, video_chat_participants_invited=null, video_chat_scheduled=null, reply_markup=null, web_app_data=null}, edited_message=null, channel_post=null, edited_channel_post=null, inline_query=null, chosen_inline_result=null, callback_query=null, shipping_query=null, pre_checkout_query=null, poll=null, poll_answer=null, my_chat_member=null, chat_member=null, chat_join_request=null}
+2023-05-25 18:01:22,409 INFO BotUpdatesListener [OkHttp https://api.telegram.org/...] Get updates: Update{update_id=202965252, message=Message{message_id=361, message_thread_id=null, from=User{id=1516284825, is_bot=false, first_name='Adem', last_name='null', username='shanghaivibez', language_code='ru', is_premium='null', added_to_attachment_menu='null', can_join_groups=null, can_read_all_group_messages=null, supports_inline_queries=null}, sender_chat=null, date=1685016082, chat=Chat{id=1516284825, type=Private, first_name='Adem', last_name='null', is_forum=null, username='shanghaivibez', title='null', photo=null, active_usernames=null, emoji_status_custom_emoji_id='null', bio='null', has_private_forwards=null, has_restricted_voice_and_video_messages=null, has_hidden_members=null, has_aggressive_anti_spam_enabled=null, join_to_send_messages=null, join_by_request=null, description='null', invite_link='null', pinned_message=null, permissions=null, slow_mode_delay=null, message_auto_delete_time=null, has_protected_content=null, sticker_set_name='null', can_set_sticker_set=null, linked_chat_id=null, location=null}, forward_from=null, forward_from_chat=null, forward_from_message_id=null, forward_signature='null', forward_sender_name='null', forward_date=null, is_topic_message=null, is_automatic_forward=null, reply_to_message=null, via_bot=null, edit_date=null, has_protected_content=null, has_media_spoiler=null, media_group_id='null', author_signature='null', text='10KZT', entities=null, caption_entities=null, audio=null, document=null, animation=null, game=null, photo=null, sticker=null, video=null, voice=null, video_note=null, caption='null', contact=null, location=null, venue=null, poll=null, dice=null, new_chat_members=null, left_chat_member=null, new_chat_title='null', new_chat_photo=null, delete_chat_photo=null, group_chat_created=null, supergroup_chat_created=null, channel_chat_created=null, message_auto_delete_timer_changed=null, migrate_to_chat_id=null, migrate_from_chat_id=null, pinned_message=null, invoice=null, successful_payment=null, user_shared=null, chat_shared=null, connected_website='null', passport_data=null, proximity_alert_triggered=null, forum_topic_created=null, forum_topic_edited=null, forum_topic_closed=null, forum_topic_reopened=null, general_forum_topic_hidden=null, general_forum_topic_unhidden=null, write_access_allowed=null, video_chat_started=null, video_chat_ended=null, video_chat_participants_invited=null, video_chat_scheduled=null, reply_markup=null, web_app_data=null}, edited_message=null, channel_post=null, edited_channel_post=null, inline_query=null, chosen_inline_result=null, callback_query=null, shipping_query=null, pre_checkout_query=null, poll=null, poll_answer=null, my_chat_member=null, chat_member=null, chat_join_request=null}
+2023-05-25 18:01:39,379 INFO LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-25 18:01:39,381 INFO HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-05-25 18:01:39,389 INFO HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

@@ -19,9 +19,9 @@ import java.text.DecimalFormat;
 public class CurrencyConverter {
 
     @Value("${api.url.kzt}")
-    private final String USD_TO_KZT_RATE="https://v6.exchangerate-api.com/v6/8d2d01657e1a0fcaf7cb0580/pair/USD/KZT";
+    private final String USD_TO_KZT_RATE="https://v6.exchangerate-api.com/v6/YOUR_EXCHANGER_TOKEN/pair/USD/KZT";
     @Value("${api.url.usd}")
-    private final String KZT_TO_USD_RATE="https://v6.exchangerate-api.com/v6/8d2d01657e1a0fcaf7cb0580/pair/KZT/USD";
+    private final String KZT_TO_USD_RATE="https://v6.exchangerate-api.com/v6/YOUR_EXCHANGER_TOKEN/pair/KZT/USD";
 
 
     //method to get rates by URL
